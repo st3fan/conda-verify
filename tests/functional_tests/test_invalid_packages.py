@@ -37,7 +37,7 @@ def test_invalid_package_extension(package_dir, verifier):
         verifier.verify_package(path_to_package=package, exit_on_error=True)
 
     exception_msg = str(excinfo)
-    assert ("PackageError: " in exception_msg and
+    assert ('PackageError' in exception_msg and
             'Found package with invalid extension ".zip"' in exception_msg)
 
 
